@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML project</title>
+</head>
+<body>
+    <div class="log">
+        <h1> Influential Ads</h1>
+        <form action="{{ url_for('predict')}}" method="post">
+            <input type="number" name="Daily Time Spent" placeholder="Daily Time Spent" required="required"/>
+            <input type="number" name="Age" placeholder="Age" required="required"/>
+            <input type="number" name="Area Income" placeholder="Area Income" required="required"/>
+            <input type="number" name="Daily Net Usage" placeholder="Daily Net Usage" required="required"/>
+            <input type="number" name="Ad Topic" placeholder="Ad Topic" required="required"/>
+            <input type="number" name="city" placeholder="city" required="required"/>
+            <input type="number" name="male" placeholder="male" required="required"/>
+            <input type="number" name="country" placeholder="country" required="required"/>
+            <input type="number" name="Timestamp" placeholder="Timestamp" required="required"/>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+        </form>
+        <br>
+        <br>
+        {{ prediction_text }}
+    </div>
+</body>
+</html>
